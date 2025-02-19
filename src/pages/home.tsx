@@ -1,16 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Typography } from "@/components/ui/typography";
+import { BouncingButton } from "@/components/bouncing-button";
 
-const Home = () => {
+export function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">
-          Start building your amazing project here!
-        </p>
+    <div className="container py-8">
+      <div className="mb-8 text-center">
+        <Typography.H1>Добро пожаловать на самый глупый сайт! 🎈</Typography.H1>
+        <Typography.Lead>
+          Здесь нет ничего полезного, и это прекрасно!
+        </Typography.Lead>
+      </div>
+
+      <div className="mb-12">
+        <BouncingButton />
+      </div>
+
+      <div className="grid gap-6 text-center">
+        <Typography.H2>Почему этот сайт такой глупый? 🤔</Typography.H2>
+        <Typography.P>
+          Потому что иногда нужно просто повеселиться! Здесь вы найдёте:
+        </Typography.P>
+        <Typography.List>
+          <li>Кнопки, которые убегают от курсора</li>
+          <li>Карточки, которые крутятся без причины</li>
+          <li>Смайлики, которые меняют настроение</li>
+          <li>И много другой ерунды!</li>
+        </Typography.List>
       </div>
     </div>
   );
-};
-
-export { Home };
+}
